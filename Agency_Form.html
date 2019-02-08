@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WG - Agency Form</title>
+    <!-- <link rel="stylesheet" href="Agency.css"> -->
+    <style>
+    body {
+        background-image: url("1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    .banner {
+        margin-top: 2em;
+    }
+    
+    .gender {
+        padding-bottom: 5px;
+    }
+    
+    .container {
+        display: inline-block;
+        background-color: rgb(231, 231, 231);
+        opacity: 0.95;
+        align-content: left;
+        margin-top: 1em;
+        margin-left: 10ex;
+        text-align: left;
+        font-weight: bold;
+        font-family: "Cooper Hewitt Semibold", sans-serif;
+        box-shadow: 5px 5px 8px rgb(68, 68, 68);
+        padding: 20px 15px 20px 15px;
+    }
+    
+    .container_2 {
+        display: inline-block;
+        background-color: rgb(231, 231, 231);
+        opacity: 0.95;
+        align-content: left;
+        margin-left: 5ex;
+        text-align: left;
+        font-weight: bold;
+        font-family: "Cooper Hewitt Semibold", sans-serif;
+        box-shadow: 5px 5px 8px rgb(68, 68, 68);
+        padding: 20px 15px 20px 15px;
+    }
+    
+    .button {
+        padding: 4px;
+        text-emphasis: bold;
+        font-size: 12px;
+    }</style>
+</head>
+
+<body>
+    <img src="working-gear-logo.png" width="35%" class="banner">
+    <br><br>
+        <form>
+            <div class="container">
+            Agency Name:<br>
+            <input type="text" name="agencyname"><br><br>
+            Workers Full Name:<br>
+            <input type="text" name="workername"><br><br>
+            <div class="gender">Gender:<br></div>
+            <input type="radio" name="gender" value="male" font-size="150%"> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="other"> Other<br><br>
+            <div class="job">Occupation:<br></div>
+            <input type="radio" name="job" value="trades">Trades
+            <input type="radio" name="job" value="office">Office<br><br>
+            Apparel you need:<br>
+            <input type="text" name="clothingneed"><br><br>
+            Email: <br>
+            <input type="text" name="email"><br><br>
+            Phone Number: <br>
+            <input type="text" name="phonenumber"><br><br>
+            </div>
+            <div class="container_2">
+                Appointment Date (dd/mm/yyyy): <br>
+                <input type="text" name="date"><br><br>
+                Appointment Time (e.g. 12:30PM)<br>
+                <input type="text" name="time"><br><br>
+                <button type="submit" value="submit" class="button" onclick=printThanks()>Submit</button></form>
+            </div>
+         </form>
+</body>
+<script>
+    function printThanks() {
+        alert("Thanks for submitting");
+    }
+</script>
+
+</html>

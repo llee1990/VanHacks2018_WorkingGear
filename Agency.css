@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(221, 221, 221);
+    background-image: url("1.jpg");
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.banner {
+    margin-top: 2em;
+}
+
+.gender {
+    padding-bottom: 5px;
+}
+
+.container {
+    display: inline-block;
+    background-color: rgb(231, 231, 231);
+    opacity: 0.95;
+    align-content: left;
+    margin-top: 1em;
+    margin-left: 10ex;
+    text-align: left;
+    font-weight: bold;
+    font-family: "Cooper Hewitt Semibold", sans-serif;
+    box-shadow: 5px 5px 8px rgb(68, 68, 68);
+    padding: 20px 15px 20px 15px;
+}
+
+.container_2 {
+    display: inline-block;
+    background-color: rgb(231, 231, 231);
+    opacity: 0.95;
+    align-content: left;
+    margin-bottom: 500px;
+    margin-left: 5ex;
+    text-align: left;
+    font-weight: bold;
+    font-family: "Cooper Hewitt Semibold", sans-serif;
+    box-shadow: 5px 5px 8px rgb(68, 68, 68);
+    padding: 20px 15px 20px 15px;
+}
+
+.button {
+    padding: 4px;
+    text-emphasis: bold;
+    font-size: 12px;
+}

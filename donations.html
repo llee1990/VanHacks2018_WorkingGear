@@ -1,0 +1,150 @@
+<!DOCTYPE HTML5>
+<html>
+
+<head>
+    <title>WG - Donations Form</title>
+    <!-- <link rel="stylesheet" href="inventory.css"> -->
+    <style>
+body {
+    background-color: rgb(221, 221, 221);
+    background-image: url("inventory_background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.add_row {    
+    padding: 4px;
+    margin-bottom: 15px;
+    text-emphasis: bold;
+    font-size: 12px;
+}
+
+.banner {
+    margin-top: 3em;
+    margin-left: 30.5%;
+}
+
+.gender {
+    padding-bottom: 5px;
+}
+.container {
+    display: inline-block;
+    background-color: rgb(231, 231, 231);
+    opacity: 0.95;
+    align-content: 0;
+    margin-top: 3em;
+    margin-left: 30%;
+    text-align: left;
+    font-weight: bold;
+    font-family: "Cooper Hewitt Semibold", sans-serif;
+    box-shadow: 5px 5px 8px rgb(68, 68, 68);
+    padding: 20px 15px 10px 15px;
+}
+.button_appoint{
+    margin-top: 13px;
+    margin-bottom: 10px;
+    padding: 4px;
+    text-emphasis: bold;
+    font-size: 12px;
+}
+.button {
+    margin-top: 13px;
+    padding: 4px;
+    text-emphasis: bold;
+    font-size: 12px;
+}
+        </style>
+</head>
+
+<body>
+    <div>
+        <img src="working-gear-logo.png" width="35%" class="banner"></div>
+    <div class="container">
+        <a href="index.html"><button class="button_appoint">Appointments</button></a>
+        <form name="form">
+        New Clothing Category:<input type="text" name="addItem" size="20">
+        <input type="button" value="Add New Clothing" onclick="addNewItem();">
+    </form>
+    <br>
+    <button onclick="add_row()" class="add_row">Add rows</button>
+    <form>
+        <table id="inventoryTable">
+            <tr>
+                <th>Clothing</th>
+                <th>Size</th>
+                <th>Number of clothing</th>
+            </tr>
+            <tr>
+                <td>
+                    <select id="select">
+                        <option>Choose Clothing</option>
+                    </select>
+                </td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                    <td>
+                        <select id="select">
+                                <option>Choose Clothing</option>
+                        </select>
+                    </td>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                        <td>
+                            <select id="select">
+                                <option>Choose Clothing</option>
+                            </select>
+                        </td>
+                        <td><input type="text"></td>
+                        <td><input type="text"></td>
+                    </tr>
+        </table>
+        <button type="submit" class="button" onclick=printThanks()>Submit</button>
+    </form></div>
+</body>
+<script>
+    var array = ["Choose Clothing"]
+    var dropdownSelect = "<select><option>Choose Clothing</option></select>"
+    function add_row() {
+        var table = document.getElementById("inventoryTable")
+        var row = table.insertRow(1)
+        var cell1 = row.insertCell(0)
+        var cell2 = row.insertCell(1)
+        var cell3 = row.insertCell(2)
+        cell1.innerHTML = dropdownSelect
+        cell2.innerHTML = '<input type="text">'
+        cell3.innerHTML = '<input type="text">'
+        updateRows()
+    }
+    // TODO make this function work
+    function addNewItem() {
+        if (document.form.addItem.value.length > 0){
+            array[array.length] = document.form.addItem.value
+        }
+        updateSelect()
+        updateRows()
+    }
+    function updateSelect() {
+        dropdownSelect = "<select><option>Choose Clothing</option>"
+
+        for (var i = 1; i < array.length; i++) {
+            dropdownSelect = dropdownSelect.concat("<option>")
+            dropdownSelect = dropdownSelect.concat(array[i])
+            dropdownSelect = dropdownSelect.concat("</option>")
+        }
+        dropdownSelect = dropdownSelect.concat("</select>")
+    }
+    function updateRows() {
+        for (var i = 1; i < document.getElementById("inventoryTable").rows.length; i++) {
+            document.getElementById("inventoryTable").rows[i].cells[0].innerHTML = dropdownSelect
+        }
+    }        
+    function printThanks(){
+            alert("Thanks for submitting");
+        }
+</script>
+
+</html>

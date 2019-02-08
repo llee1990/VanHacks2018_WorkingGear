@@ -1,0 +1,151 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <title>WG - Inventory Out</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+
+        }
+
+        body {
+            background-image: url(inventory_background.jpg);
+            background-attachment: fixed;
+            background-size: 100%;
+        }
+
+        .container {
+            margin-left: 17%;
+            margin-right: 17%;
+        }
+
+        .agency-wants, .inventory-list {
+            background-color: rgb(231, 231, 231);
+            opacity: 0.95;
+            margin-top: 2em;
+            margin-bottom: 1em;
+            padding: 2em;
+            margin-left: 4em;
+            margin-right: 4em;
+            box-shadow: 4px 4px 8px rgb(77, 76, 76);
+        
+        }
+
+        ul {
+            list-style: none;
+            text-align: center;
+            border: 1px solid black;
+            padding: .5em;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+        button {
+            margin-top: 2em;
+            padding: 1em 2em;
+            border: none;
+            background-color: rgb(110, 110, 110);
+            color: white;
+            font-size: 1em;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        td, th {
+            border: 1px solid #ffffff;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+            background-color: rgb(231, 231, 231);
+        }
+
+        td {
+            justify-content: center;
+        }
+        input {
+            margin-left: 3.5em;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="donations.html"><button>Donations Page</button></a>
+    <div class="container">
+        <div class="agency-wants">
+            <h1>Clothing Wanted</h2>
+                <table>
+                    <tr>
+                        <th>Clothing</th>
+                        <th>Size</th>
+                        <th>M / F</th>
+                    </tr>
+                    <tr>
+                        <td>Jeans</td>
+                        <td>Large</td>
+                        <td>Male</td>
+                    </tr>
+                    <tr>
+                        <td>Coats</td>
+                        <td>Medium</td>
+                        <td>Male</td>
+                    </tr>
+                    <tr>
+                        <td>Shirts</td>
+                        <td>Medium</td>
+                        <td>Male</td>
+                    </tr>
+                </table>
+        </div>
+        <div class="inventory-list">
+            <h1>Inventory Out</h1>
+            <form action="">
+                <table>
+                    <tr>
+                        <th>Clothing</th>
+                        <th>Stock</th>
+                        <th>Checklist</th>
+                    </tr>
+                    <tr>
+                        <td>Jeans</td>
+                        <td>4</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>Coats</td>
+                        <td>7</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td>Shirts</td>
+                        <td>2</td>
+                        <td><input type="checkbox"></td>
+                    </tr>
+                </table>
+                <center>
+                    <a href="http://www.google.ca"><button onclick=printThanks()>Submit</button></a>
+                </center>
+            </form>
+        </div>
+    </div>
+</body>
+<script>   
+function printThanks() {
+        alert("Thanks for submitting");
+    }
+</script>
+</html>
